@@ -1,0 +1,104 @@
+{
+  "insertchain_lux": {
+    "BenchmarkInsertChain_empty_memdb": {
+      "n": 8,
+      "median_ns_per_op": 121452.5,
+      "median_tx_per_s": null,
+      "op_per_s": 8233.67
+    },
+    "BenchmarkInsertChain_ring1000_memdb": {
+      "n": 6,
+      "median_ns_per_op": 9142709.0,
+      "median_tx_per_s": null,
+      "op_per_s": 109.38
+    },
+    "BenchmarkInsertChain_ring200_memdb": {
+      "n": 8,
+      "median_ns_per_op": 7038813.5,
+      "median_tx_per_s": null,
+      "op_per_s": 142.07
+    },
+    "BenchmarkInsertChain_valueTx_memdb": {
+      "n": 8,
+      "median_ns_per_op": 160193.5,
+      "median_tx_per_s": null,
+      "op_per_s": 6242.45
+    }
+  },
+  "insertchain_coreth": {
+    "BenchmarkInsertChain_empty_memdb": {
+      "n": 8,
+      "median_ns_per_op": 57069.0,
+      "median_tx_per_s": null,
+      "op_per_s": 17522.65
+    },
+    "BenchmarkInsertChain_ring200_memdb": {
+      "n": 2,
+      "median_ns_per_op": 8058817.0,
+      "median_tx_per_s": null,
+      "op_per_s": 124.09
+    },
+    "BenchmarkInsertChain_valueTx_memdb": {
+      "n": 8,
+      "median_ns_per_op": 139563.0,
+      "median_tx_per_s": null,
+      "op_per_s": 7165.22
+    }
+  },
+  "blockstm_lux": {
+    "BenchmarkBlockSTMHeavyTx/blockstm": {
+      "n": 5,
+      "median_ns_per_op": 37318651.0,
+      "median_tx_per_s": 53593.0,
+      "op_per_s": 26.8
+    },
+    "BenchmarkBlockSTMHeavyTx/serial": {
+      "n": 5,
+      "median_ns_per_op": 6857092.0,
+      "median_tx_per_s": 291669.0,
+      "op_per_s": 145.83
+    },
+    "BenchmarkBlockSTMLightTx/blockstm": {
+      "n": 5,
+      "median_ns_per_op": 5322596.0,
+      "median_tx_per_s": 375757.0,
+      "op_per_s": 187.88
+    },
+    "BenchmarkBlockSTMLightTx/serial": {
+      "n": 5,
+      "median_ns_per_op": 17849.0,
+      "median_tx_per_s": 112048973.0,
+      "op_per_s": 56025.55
+    },
+    "BenchmarkBlockSTMWorkers/workers_1": {
+      "n": 5,
+      "median_ns_per_op": 65530037.0,
+      "median_tx_per_s": 30520.0,
+      "op_per_s": 15.26
+    },
+    "BenchmarkBlockSTMWorkers/workers_10": {
+      "n": 5,
+      "median_ns_per_op": 38510329.0,
+      "median_tx_per_s": 51934.0,
+      "op_per_s": 25.97
+    },
+    "BenchmarkBlockSTMWorkers/workers_2": {
+      "n": 5,
+      "median_ns_per_op": 48566419.0,
+      "median_tx_per_s": 41181.0,
+      "op_per_s": 20.59
+    },
+    "BenchmarkBlockSTMWorkers/workers_4": {
+      "n": 5,
+      "median_ns_per_op": 41983278.0,
+      "median_tx_per_s": 47638.0,
+      "op_per_s": 23.82
+    },
+    "BenchmarkBlockSTMWorkers/workers_8": {
+      "n": 5,
+      "median_ns_per_op": 38700414.0,
+      "median_tx_per_s": 51679.0,
+      "op_per_s": 25.84
+    }
+  }
+}

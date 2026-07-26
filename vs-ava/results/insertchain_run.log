@@ -1,0 +1,36 @@
+### lux  (/tmp/lux_core.test)  GOMAXPROCS=10  count=8 benchtime=2s  2026-07-10T19:20:25Z ###
+goos: darwin
+goarch: arm64
+pkg: github.com/luxfi/evm/core
+cpu: Apple M1 Max
+BenchmarkInsertChain_empty_memdb-10       	   20160	    118634 ns/op	  179628 B/op	     596 allocs/op
+BenchmarkInsertChain_empty_memdb-10       	   21339	    121485 ns/op	  179590 B/op	     596 allocs/op
+BenchmarkInsertChain_empty_memdb-10       	   19830	    124034 ns/op	  179650 B/op	     596 allocs/op
+BenchmarkInsertChain_empty_memdb-10       	   21790	    125131 ns/op	  179558 B/op	     596 allocs/op
+BenchmarkInsertChain_empty_memdb-10       	   22476	    121393 ns/op	  179511 B/op	     596 allocs/op
+BenchmarkInsertChain_empty_memdb-10       	   22570	    121060 ns/op	  179506 B/op	     596 allocs/op
+BenchmarkInsertChain_empty_memdb-10       	   22512	    123068 ns/op	  179509 B/op	     596 allocs/op
+BenchmarkInsertChain_empty_memdb-10       	   21423	    121420 ns/op	  179584 B/op	     596 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10     	   14499	    158254 ns/op	  101408 B/op	     876 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10     	   12300	    172948 ns/op	  101681 B/op	     876 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10     	   13765	    161314 ns/op	  101472 B/op	     876 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10     	   13622	    163235 ns/op	  101491 B/op	     876 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10     	   15307	    165394 ns/op	  101332 B/op	     876 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10     	   15169	    159073 ns/op	  101320 B/op	     876 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10     	   15442	    154828 ns/op	  101309 B/op	     876 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10     	   15698	    151368 ns/op	  101295 B/op	     876 allocs/op
+BenchmarkInsertChain_ring200_memdb-10     	     354	   7285500 ns/op	 7613233 B/op	   54816 allocs/op
+BenchmarkInsertChain_ring200_memdb-10     	     358	   7094141 ns/op	 7602580 B/op	   54861 allocs/op
+BenchmarkInsertChain_ring200_memdb-10     	     336	   7301708 ns/op	 7608153 B/op	   54884 allocs/op
+BenchmarkInsertChain_ring200_memdb-10     	     360	   6983486 ns/op	 7599439 B/op	   54928 allocs/op
+BenchmarkInsertChain_ring200_memdb-10     	     349	   6615311 ns/op	 7601848 B/op	   54906 allocs/op
+BenchmarkInsertChain_ring200_memdb-10     	     356	   7110361 ns/op	 7597141 B/op	   54930 allocs/op
+BenchmarkInsertChain_ring200_memdb-10     	     324	   6965436 ns/op	 7608096 B/op	   54850 allocs/op
+BenchmarkInsertChain_ring200_memdb-10     	     333	   6890591 ns/op	 7604196 B/op	   54890 allocs/op
+BenchmarkInsertChain_ring1000_memdb-10    	     252	  10177235 ns/op	 9067912 B/op	   72943 allocs/op
+BenchmarkInsertChain_ring1000_memdb-10    	     256	   9459739 ns/op	 9057250 B/op	   73014 allocs/op
+BenchmarkInsertChain_ring1000_memdb-10    	     261	   9162609 ns/op	 9057932 B/op	   73045 allocs/op
+BenchmarkInsertChain_ring1000_memdb-10    	     264	   9122809 ns/op	 9052289 B/op	   73031 allocs/op
+BenchmarkInsertChain_ring1000_memdb-10    	     255	   9053884 ns/op	 9065392 B/op	   73015 allocs/op
+BenchmarkInsertChain_ring1000_memdb-10    	     277	   8662616 ns/op	 9040998 B/op	   73050 allocs/op
+BenchmarkInsertChain_ring1000_memdb-10    	

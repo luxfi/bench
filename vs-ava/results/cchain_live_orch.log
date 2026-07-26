@@ -1,0 +1,34 @@
+### Lux C-Chain live throughput on lux-testnet (do-sfo3-lux-k8s) — 2026-07-10T19:04:29Z ###
+### image: ghcr.io/luxfi/node:v1.36.0 ###
+### loadgen deployed — waiting for MEASURE (fund + 90s window) ###
+  [19:04:44] funding 60 keys x 5 LUX, nonce=1, gp=200gwei
+  [19:04:57] PROGRESS t=6s tip=6 blocks=2 mined_tx=15 offered=844 off_tps=138.4 mined_tps=2.5 gasUsed_sum=315000 fullness=1.31%
+  [19:04:51] === STEADY LOAD: 24 senders, measuring 90s (gp=200gwei) ===
+  [19:05:03] PROGRESS t=12s tip=9 blocks=5 mined_tx=36 offered=1616 off_tps=132.5 mined_tps=3.0 gasUsed_sum=756000 fullness=1.26%
+  [19:04:51] === STEADY LOAD: 24 senders, measuring 90s (gp=200gwei) ===
+  [19:05:13] PROGRESS t=21s tip=9 blocks=5 mined_tx=36 offered=2796 off_tps=131.5 mined_tps=1.7 gasUsed_sum=756000 fullness=1.26%
+  [19:04:51] === STEADY LOAD: 24 senders, measuring 90s (gp=200gwei) ===
+  [19:05:22] PROGRESS t=30s tip=11 blocks=7 mined_tx=46 offered=4005 off_tps=131.9 mined_tps=1.5 gasUsed_sum=966000 fullness=1.15%
+  [19:04:51] === STEADY LOAD: 24 senders, measuring 90s (gp=200gwei) ===
+  [19:05:31] PROGRESS t=40s tip=15 blocks=11 mined_tx=86 offered=5251 off_tps=132.9 mined_tps=2.2 gasUsed_sum=1806000 fullness=1.37%
+  [19:04:51] === STEADY LOAD: 24 senders, measuring 90s (gp=200gwei) ===
+  [19:05:37] PROGRESS t=46s tip=16 blocks=12 mined_tx=90 offered=6139 off_tps=134.7 mined_tps=2.0 gasUsed_sum=1890000 fullness=1.31%
+  [19:04:51] === STEADY LOAD: 24 senders, measuring 90s (gp=200gwei) ===
+  [19:05:46] PROGRESS t=55s tip=17 blocks=13 mined_tx=93 offered=7405 off_tps=135.5 mined_tps=1.7 gasUsed_sum=1953000 fullness=1.25%
+  [19:04:51] === STEADY LOAD: 24 senders, measuring 90s (gp=200gwei) ===
+  [19:05:55] PROGRESS t=64s tip=17 blocks=13 mined_tx=93 offered=8650 off_tps=135.8 mined_tps=1.5 gasUsed_sum=1953000 fullness=1.25%
+  [19:04:51] === STEADY LOAD: 24 senders, measuring 90s (gp=200gwei) ===
+  [19:06:04] PROGRESS t=73s tip=17 blocks=13 mined_tx=93 offered=9894 off_tps=135.9 mined_tps=1.3 gasUsed_sum=1953000 fullness=1.25%
+  [19:04:51] === STEADY LOAD: 24 senders, measuring 90s (gp=200gwei) ===
+  [19:06:13] PROGRESS t=82s tip=22 blocks=18 mined_tx=165 offered=11159 off_tps=136.2 mined_tps=2.0 gasUsed_sum=3465000 fullness=1.60%
+  [19:04:51] === STEADY LOAD: 24 senders, measuring 90s (gp=200gwei) ===
+  [19:06:19] PROGRESS t=88s tip=22 blocks=18 mined_tx=165 offered=11983 off_tps=136.2 mined_tps=1.9 gasUsed_sum=3465000 fullness=1.60%
+  [19:04:51] === STEADY LOAD: 24 senders, measuring 90s (gp=200gwei) ===
+
+================ LUX C-CHAIN LIVE THROUGHPUT (MEASURED) ================
+  File "<string>", line 3
+    print(f"  window            {m[\"window_s\"]}s  blocks {m[\"blocks\"]}  ({m[\"b0\"]}->{m[\"b1\"]})")
+                                                                                                       ^
+SyntaxError: f-string expression part cannot include a backslash
+### done — json /Users/z/work/lux/bench/vs-ava/results/cchain_live.json ###
+CCHAIN_LIVE_ORCH_DONE exit=0 2026-07-10T19:06:31Z

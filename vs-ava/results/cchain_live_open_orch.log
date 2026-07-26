@@ -1,0 +1,36 @@
+### Lux C-Chain live throughput (tp_loadgen_open.py) on lux-testnet (do-sfo3-lux-k8s) — 2026-07-10T19:10:45Z ###
+### image: ghcr.io/luxfi/node:v1.36.0 ###
+### tp-loadgen-open deployed — waiting for MEASURE (fund + 90s window) ###
+  [19:11:01] funding 60 keys x 5 LUX nonce=61 gp=200gwei
+  [19:11:01] funding 60 keys x 5 LUX nonce=61 gp=200gwei
+  [19:11:01] funding 60 keys x 5 LUX nonce=61 gp=200gwei
+  [19:11:01] funding 60 keys x 5 LUX nonce=61 gp=200gwei
+  [19:11:01] funding 60 keys x 5 LUX nonce=61 gp=200gwei
+  [19:11:49] PROGRESS t=4s tip=114 blocks=0 mined_tx=0 offered=443 off_tps=118.9 mined_tps=0.0 peak_tx/blk=0 fullness=0.00% peak_full=0.00%
+  [19:11:45] === OPEN-LOOP SATURATE: 60 accts x pipeline 64, measuring 90s (gp=200gwei) ===
+  [19:11:58] PROGRESS t=13s tip=115 blocks=1 mined_tx=9 offered=1688 off_tps=130.7 mined_tps=0.7 peak_tx/blk=9 fullness=1.57% peak_full=1.57%
+  [19:11:45] === OPEN-LOOP SATURATE: 60 accts x pipeline 64, measuring 90s (gp=200gwei) ===
+  [19:12:08] PROGRESS t=22s tip=118 blocks=4 mined_tx=25 offered=2892 off_tps=129.1 mined_tps=1.1 peak_tx/blk=9 fullness=1.09% peak_full=1.57%
+  [19:11:45] === OPEN-LOOP SATURATE: 60 accts x pipeline 64, measuring 90s (gp=200gwei) ===
+  [19:12:14] PROGRESS t=29s tip=119 blocks=5 mined_tx=26 offered=3669 off_tps=128.5 mined_tps=0.9 peak_tx/blk=9 fullness=0.91% peak_full=1.57%
+  [19:11:45] === OPEN-LOOP SATURATE: 60 accts x pipeline 64, measuring 90s (gp=200gwei) ===
+  [19:12:24] PROGRESS t=38s tip=122 blocks=8 mined_tx=67 offered=3834 off_tps=100.4 mined_tps=1.8 peak_tx/blk=29 fullness=1.47% peak_full=5.08%
+  [19:11:45] === OPEN-LOOP SATURATE: 60 accts x pipeline 64, measuring 90s (gp=200gwei) ===
+  [19:12:31] PROGRESS t=45s tip=123 blocks=9 mined_tx=76 offered=3834 off_tps=84.9 mined_tps=1.7 peak_tx/blk=29 fullness=1.48% peak_full=5.08%
+  [19:11:45] === OPEN-LOOP SATURATE: 60 accts x pipeline 64, measuring 90s (gp=200gwei) ===
+  [19:12:41] PROGRESS t=56s tip=126 blocks=12 mined_tx=158 offered=3846 off_tps=69.1 mined_tps=2.8 peak_tx/blk=36 fullness=2.30% peak_full=6.30%
+  [19:11:45] === OPEN-LOOP SATURATE: 60 accts x pipeline 64, measuring 90s (gp=200gwei) ===
+  [19:12:48] PROGRESS t=62s tip=129 blocks=15 mined_tx=259 offered=3901 off_tps=62.6 mined_tps=4.2 peak_tx/blk=52 fullness=3.02% peak_full=9.10%
+  [19:11:45] === OPEN-LOOP SATURATE: 60 accts x pipeline 64, measuring 90s (gp=200gwei) ===
+  [19:12:57] PROGRESS t=72s tip=133 blocks=19 mined_tx=405 offered=4051 off_tps=56.4 mined_tps=5.6 peak_tx/blk=52 fullness=3.73% peak_full=9.10%
+  [19:11:45] === OPEN-LOOP SATURATE: 60 accts x pipeline 64, measuring 90s (gp=200gwei) ===
+  [19:13:06] PROGRESS t=81s tip=134 blocks=20 mined_tx=411 offered=4074 off_tps=50.3 mined_tps=5.1 peak_tx/blk=52 fullness=3.60% peak_full=9.10%
+  [19:11:45] === OPEN-LOOP SATURATE: 60 accts x pipeline 64, measuring 90s (gp=200gwei) ===
+
+================ LUX C-CHAIN LIVE THROUGHPUT — tp_loadgen_open.py (MEASURED) ================
+  File "<string>", line 4
+    print(f"  mode              {g(\"mode\",\"closed-loop\")}   window {g(\"window_s\")}s  blocks {g(\"blocks\")} ({g(\"b0\")}->{g(\"b1\")})")
+                                                                                                                                             ^
+SyntaxError: f-string expression part cannot include a backslash
+### done — json /Users/z/work/lux/bench/vs-ava/results/cchain_live_open.json ###
+CCHAIN_OPEN_DONE exit=0 2026-07-10T19:13:18Z

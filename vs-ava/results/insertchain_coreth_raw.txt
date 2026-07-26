@@ -1,0 +1,24 @@
+### coreth (/tmp/coreth_core.test) GOMAXPROCS=10 count=8 benchtime=2s 2026-07-10T19:34:53Z ###
+goos: darwin
+goarch: arm64
+pkg: github.com/ava-labs/coreth/core
+cpu: Apple M1 Max
+BenchmarkInsertChain_empty_memdb-10      	   38612	     61713 ns/op	  149719 B/op	     659 allocs/op
+BenchmarkInsertChain_empty_memdb-10      	   47402	     63209 ns/op	  149966 B/op	     659 allocs/op
+BenchmarkInsertChain_empty_memdb-10      	   47136	     56797 ns/op	  149920 B/op	     659 allocs/op
+BenchmarkInsertChain_empty_memdb-10      	   43269	     54818 ns/op	  149640 B/op	     659 allocs/op
+BenchmarkInsertChain_empty_memdb-10      	   37639	     57045 ns/op	  149705 B/op	     659 allocs/op
+BenchmarkInsertChain_empty_memdb-10      	   46882	     57971 ns/op	  149896 B/op	     659 allocs/op
+BenchmarkInsertChain_empty_memdb-10      	   46748	     57093 ns/op	  149948 B/op	     659 allocs/op
+BenchmarkInsertChain_empty_memdb-10      	   46854	     56337 ns/op	  149985 B/op	     659 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10    	   18259	    156111 ns/op	  181186 B/op	    1106 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10    	   18028	    136901 ns/op	  181309 B/op	    1107 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10    	   18031	    139555 ns/op	  181278 B/op	    1107 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10    	   18234	    139571 ns/op	  181562 B/op	    1107 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10    	   16362	    137170 ns/op	  181516 B/op	    1108 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10    	   18122	    132152 ns/op	  181342 B/op	    1108 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10    	   16554	    143845 ns/op	  181422 B/op	    1107 allocs/op
+BenchmarkInsertChain_valueTx_memdb-10    	   15848	    161659 ns/op	  181394 B/op	    1106 allocs/op
+BenchmarkInsertChain_ring200_memdb-10    	     314	   7919849 ns/op	 6461399 B/op	   92556 allocs/op
+BenchmarkInsertChain_ring200_memdb-10    	     301	   8197785 ns/op	 6462648 B/op	   92600 allocs/op
+BenchmarkInsertChain_ring200_memdb-10    	### coreth ring200 truncated to n=2 (setup-bound, preliminary) 2026-07-10T19:46:33Z ###

@@ -1,0 +1,37 @@
+[19:04:44] funder 0x9011E888251AB053B7bD1cdB598Db4f9DEd94714 | nodes: ['luxd-0', 'luxd-1', 'luxd-2', 'luxd-3', 'luxd-4'] | chainId 96368
+[19:04:44] funding 60 keys x 5 LUX, nonce=1, gp=200gwei
+[19:04:51] funded 60/60 in 7s
+[19:04:51] === STEADY LOAD: 24 senders, measuring 90s (gp=200gwei) ===
+[19:04:51] === MEASURE START t0=1783710291.7 b0=4 window=90s senders=24 ===
+[19:04:54] PROGRESS t=3s tip=6 blocks=2 mined_tx=15 offered=425 off_tps=138.2 mined_tps=4.9 gasUsed_sum=315000 fullness=1.31%
+[19:04:57] PROGRESS t=6s tip=6 blocks=2 mined_tx=15 offered=844 off_tps=138.4 mined_tps=2.5 gasUsed_sum=315000 fullness=1.31%
+[19:05:00] PROGRESS t=9s tip=9 blocks=5 mined_tx=36 offered=1246 off_tps=135.7 mined_tps=3.9 gasUsed_sum=756000 fullness=1.26%
+[19:05:03] PROGRESS t=12s tip=9 blocks=5 mined_tx=36 offered=1616 off_tps=132.5 mined_tps=3.0 gasUsed_sum=756000 fullness=1.26%
+[19:05:06] PROGRESS t=15s tip=9 blocks=5 mined_tx=36 offered=2001 off_tps=131.5 mined_tps=2.4 gasUsed_sum=756000 fullness=1.26%
+[19:05:09] PROGRESS t=18s tip=9 blocks=5 mined_tx=36 offered=2397 off_tps=131.4 mined_tps=2.0 gasUsed_sum=756000 fullness=1.26%
+[19:05:13] PROGRESS t=21s tip=9 blocks=5 mined_tx=36 offered=2796 off_tps=131.5 mined_tps=1.7 gasUsed_sum=756000 fullness=1.26%
+[19:05:16] PROGRESS t=24s tip=9 blocks=5 mined_tx=36 offered=3204 off_tps=131.9 mined_tps=1.5 gasUsed_sum=756000 fullness=1.26%
+[19:05:19] PROGRESS t=27s tip=11 blocks=7 mined_tx=46 offered=3600 off_tps=131.6 mined_tps=1.7 gasUsed_sum=966000 fullness=1.15%
+[19:05:22] PROGRESS t=30s tip=11 blocks=7 mined_tx=46 offered=4005 off_tps=131.9 mined_tps=1.5 gasUsed_sum=966000 fullness=1.15%
+[19:05:25] PROGRESS t=33s tip=12 blocks=8 mined_tx=65 offered=4411 off_tps=132.1 mined_tps=1.9 gasUsed_sum=1365000 fullness=1.42%
+[19:05:28] PROGRESS t=36s tip=12 blocks=8 mined_tx=65 offered=4824 off_tps=132.5 mined_tps=1.8 gasUsed_sum=1365000 fullness=1.42%
+[19:05:31] PROGRESS t=40s tip=15 blocks=11 mined_tx=86 offered=5251 off_tps=132.9 mined_tps=2.2 gasUsed_sum=1806000 fullness=1.37%
+[19:05:34] PROGRESS t=43s tip=16 blocks=12 mined_tx=90 offered=5701 off_tps=134.0 mined_tps=2.1 gasUsed_sum=1890000 fullness=1.31%
+[19:05:37] PROGRESS t=46s tip=16 blocks=12 mined_tx=90 offered=6139 off_tps=134.7 mined_tps=2.0 gasUsed_sum=1890000 fullness=1.31%
+[19:05:40] PROGRESS t=49s tip=17 blocks=13 mined_tx=93 offered=6566 off_tps=135.1 mined_tps=1.9 gasUsed_sum=1953000 fullness=1.25%
+[19:05:43] PROGRESS t=52s tip=17 blocks=13 mined_tx=93 offered=6994 off_tps=135.5 mined_tps=1.8 gasUsed_sum=1953000 fullness=1.25%
+[19:05:46] PROGRESS t=55s tip=17 blocks=13 mined_tx=93 offered=7405 off_tps=135.5 mined_tps=1.7 gasUsed_sum=1953000 fullness=1.25%
+[19:05:49] PROGRESS t=58s tip=17 blocks=13 mined_tx=93 offered=7820 off_tps=135.6 mined_tps=1.6 gasUsed_sum=1953000 fullness=1.25%
+[19:05:52] PROGRESS t=61s tip=17 blocks=13 mined_tx=93 offered=8239 off_tps=135.7 mined_tps=1.5 gasUsed_sum=1953000 fullness=1.25%
+[19:05:55] PROGRESS t=64s tip=17 blocks=13 mined_tx=93 offered=8650 off_tps=135.8 mined_tps=1.5 gasUsed_sum=1953000 fullness=1.25%
+[19:05:58] PROGRESS t=67s tip=17 blocks=13 mined_tx=93 offered=9069 off_tps=135.9 mined_tps=1.4 gasUsed_sum=1953000 fullness=1.25%
+[19:06:01] PROGRESS t=70s tip=17 blocks=13 mined_tx=93 offered=9491 off_tps=136.1 mined_tps=1.3 gasUsed_sum=1953000 fullness=1.25%
+[19:06:04] PROGRESS t=73s tip=17 blocks=13 mined_tx=93 offered=9894 off_tps=135.9 mined_tps=1.3 gasUsed_sum=1953000 fullness=1.25%
+[19:06:07] PROGRESS t=76s tip=17 blocks=13 mined_tx=93 offered=10299 off_tps=135.9 mined_tps=1.2 gasUsed_sum=1953000 fullness=1.25%
+[19:06:10] PROGRESS t=79s tip=22 blocks=18 mined_tx=165 offered=10727 off_tps=135.9 mined_tps=2.1 gasUsed_sum=3465000 fullness=1.60%
+[19:06:13] PROGRESS t=82s tip=22 blocks=18 mined_tx=165 offered=11159 off_tps=136.2 mined_tps=2.0 gasUsed_sum=3465000 fullness=1.60%
+[19:06:16] PROGRESS t=85s tip=22 blocks=18 mined_tx=165 offered=11575 off_tps=136.3 mined_tps=1.9 gasUsed_sum=3465000 fullness=1.60%
+[19:06:19] PROGRESS t=88s tip=22 blocks=18 mined_tx=165 offered=11983 off_tps=136.2 mined_tps=1.9 gasUsed_sum=3465000 fullness=1.60%
+[19:06:22] PROGRESS t=91s tip=22 blocks=18 mined_tx=165 offered=12394 off_tps=136.2 mined_tps=1.8 gasUsed_sum=3465000 fullness=1.60%
+[19:06:22] MEASURE {"window_s": 91.0, "b0": 4, "b1": 22, "blocks": 18, "blocks_per_s": 0.1978, "offered_tx": 12394, "offered_tps": 136.2, "mined_tx": 165, "mined_tps": 1.81, "avg_tx_per_block": 9.17, "gas_used_sum": 3465000, "gas_per_s": 38076.3, "gas_limit": 12000000, "avg_gas_per_block": 192500.0, "avg_fullness_pct": 1.604, "base_fee_gwei_last": 25.0, "block_interval_ms_mean": 4384.4, "coherent": true, "conf_height": 20, "node_hashes": {"0": "0x5960dc4101", "1": "0x5960dc4101", "2": "0x5960dc4101", "3": "0x5960dc4101", "4": "0x5960dc4101"}, "senders": 24, "nodes": 5}
+[19:06:22] === loadgen done ===

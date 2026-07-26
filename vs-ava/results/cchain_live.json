@@ -1,0 +1,30 @@
+{
+    "window_s": 91.0,
+    "b0": 4,
+    "b1": 22,
+    "blocks": 18,
+    "blocks_per_s": 0.1978,
+    "offered_tx": 12394,
+    "offered_tps": 136.2,
+    "mined_tx": 165,
+    "mined_tps": 1.81,
+    "avg_tx_per_block": 9.17,
+    "gas_used_sum": 3465000,
+    "gas_per_s": 38076.3,
+    "gas_limit": 12000000,
+    "avg_gas_per_block": 192500.0,
+    "avg_fullness_pct": 1.604,
+    "base_fee_gwei_last": 25.0,
+    "block_interval_ms_mean": 4384.4,
+    "coherent": true,
+    "conf_height": 20,
+    "node_hashes": {
+        "0": "0x5960dc4101",
+        "1": "0x5960dc4101",
+        "2": "0x5960dc4101",
+        "3": "0x5960dc4101",
+        "4": "0x5960dc4101"
+    },
+    "senders": 24,
+    "nodes": 5
+}

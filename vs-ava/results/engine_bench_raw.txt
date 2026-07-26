@@ -1,0 +1,27 @@
+goos: darwin
+goarch: arm64
+pkg: github.com/luxfi/consensus/engine/chain
+cpu: Apple M1 Max
+BenchmarkAddSingleBlock-10       	 1000000	      1373 ns/op	     922 B/op	       6 allocs/op
+BenchmarkAddSingleBlock-10       	 1000000	      1188 ns/op	     921 B/op	       6 allocs/op
+BenchmarkAddSingleBlock-10       	 1000000	      1214 ns/op	     922 B/op	       6 allocs/op
+BenchmarkAddSingleBlock-10       	 1000000	      1159 ns/op	     921 B/op	       6 allocs/op
+BenchmarkAddSingleBlock-10       	 1000000	      1211 ns/op	     921 B/op	       6 allocs/op
+BenchmarkProcessSingleVote-10    	 3264974	       448.4 ns/op	     109 B/op	       1 allocs/op
+BenchmarkProcessSingleVote-10    	 3012904	       424.6 ns/op	     114 B/op	       1 allocs/op
+BenchmarkProcessSingleVote-10    	 3011953	       417.9 ns/op	     114 B/op	       1 allocs/op
+BenchmarkProcessSingleVote-10    	 3148124	       429.0 ns/op	     112 B/op	       1 allocs/op
+BenchmarkProcessSingleVote-10    	 3095898	       422.1 ns/op	     113 B/op	       1 allocs/op
+BenchmarkFinalizationCheck-10    	66010684	        19.44 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFinalizationCheck-10    	66092181	        19.05 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFinalizationCheck-10    	67674421	        18.44 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFinalizationCheck-10    	71239696	        17.97 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFinalizationCheck-10    	71005568	        20.13 ns/op	       0 B/op	       0 allocs/op
+BenchmarkBlockAcceptance-10      	 4602512	       251.3 ns/op	     296 B/op	       4 allocs/op
+BenchmarkBlockAcceptance-10      	 4703828	       269.2 ns/op	     296 B/op	       4 allocs/op
+BenchmarkBlockAcceptance-10      	 4637824	       250.9 ns/op	     296 B/op	       4 allocs/op
+BenchmarkBlockAcceptance-10      	 4829844	       257.6 ns/op	     296 B/op	       4 allocs/op
+BenchmarkBlockAcceptance-10      	 4701016	       241.0 ns/op	     296 B/op	       4 allocs/op
+PASS
+ok  	github.com/luxfi/consensus/engine/chain	30.495s
+ENGINE_BENCH exit=0 2026-07-10T19:47:08Z

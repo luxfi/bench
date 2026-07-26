@@ -1,0 +1,53 @@
+{"level":"info","backend":"gevm","cores":10,"gpu_status":"none","time":"2026-07-10T11:57:10-07:00","message":"parallel backend: Go EVM (Block-STM across all cores)"}
+goos: darwin
+goarch: arm64
+pkg: github.com/luxfi/evm/core/parallel
+cpu: Apple M1 Max
+BenchmarkBlockSTMLightTx/serial-8         	   67563	     17900 ns/op	 111729944 tx/s	       0 B/op	       0 allocs/op
+BenchmarkBlockSTMLightTx/serial-8         	   66643	     17849 ns/op	 112048973 tx/s	       0 B/op	       0 allocs/op
+BenchmarkBlockSTMLightTx/serial-8         	   67657	     17895 ns/op	 111763399 tx/s	       0 B/op	       0 allocs/op
+BenchmarkBlockSTMLightTx/serial-8         	   67716	     17822 ns/op	 112223214 tx/s	       0 B/op	       0 allocs/op
+BenchmarkBlockSTMLightTx/serial-8         	   67962	     17820 ns/op	 112236383 tx/s	       0 B/op	       0 allocs/op
+BenchmarkBlockSTMLightTx/blockstm-8       	     238	   5322596 ns/op	    375757 tx/s	 9689935 B/op	   48046 allocs/op
+BenchmarkBlockSTMLightTx/blockstm-8       	     232	   5054372 ns/op	    395697 tx/s	 9689933 B/op	   48046 allocs/op
+BenchmarkBlockSTMLightTx/blockstm-8       	     219	   5353553 ns/op	    373584 tx/s	 9689925 B/op	   48046 allocs/op
+BenchmarkBlockSTMLightTx/blockstm-8       	     234	   5270247 ns/op	    379489 tx/s	 9689915 B/op	   48046 allocs/op
+BenchmarkBlockSTMLightTx/blockstm-8       	     234	   5486929 ns/op	    364503 tx/s	 9689941 B/op	   48046 allocs/op
+BenchmarkBlockSTMHeavyTx/serial-8         	     176	   6844789 ns/op	    292193 tx/s	       0 B/op	       0 allocs/op
+BenchmarkBlockSTMHeavyTx/serial-8         	     174	   7038977 ns/op	    284133 tx/s	       0 B/op	       0 allocs/op
+BenchmarkBlockSTMHeavyTx/serial-8         	     174	   7037739 ns/op	    284183 tx/s	       0 B/op	       0 allocs/op
+BenchmarkBlockSTMHeavyTx/serial-8         	     176	   6811131 ns/op	    293638 tx/s	       0 B/op	       0 allocs/op
+BenchmarkBlockSTMHeavyTx/serial-8         	     175	   6857092 ns/op	    291669 tx/s	       0 B/op	       0 allocs/op
+BenchmarkBlockSTMHeavyTx/blockstm-8       	      30	  38067236 ns/op	     52539 tx/s	 9689956 B/op	   48046 allocs/op
+BenchmarkBlockSTMHeavyTx/blockstm-8       	      32	  37269913 ns/op	     53663 tx/s	 9689967 B/op	   48046 allocs/op
+BenchmarkBlockSTMHeavyTx/blockstm-8       	      31	  38646704 ns/op	     51751 tx/s	 9689897 B/op	   48046 allocs/op
+BenchmarkBlockSTMHeavyTx/blockstm-8       	      32	  37318651 ns/op	     53593 tx/s	 9689911 B/op	   48046 allocs/op
+BenchmarkBlockSTMHeavyTx/blockstm-8       	      32	  37171763 ns/op	     53804 tx/s	 9689998 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_1-8      	      16	  65306862 ns/op	     30625 tx/s	 9689898 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_1-8      	      18	  65554002 ns/op	     30509 tx/s	 9689897 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_1-8      	      16	  65579714 ns/op	     30497 tx/s	 9689898 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_1-8      	      18	  65016347 ns/op	     30762 tx/s	 9689904 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_1-8      	      18	  65530037 ns/op	     30520 tx/s	 9689904 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_2-8      	      25	  48287458 ns/op	     41419 tx/s	 9689901 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_2-8      	      22	  49578269 ns/op	     40340 tx/s	 9689897 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_2-8      	      24	  48255059 ns/op	     41446 tx/s	 9689906 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_2-8      	      24	  48610689 ns/op	     41143 tx/s	 9689930 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_2-8      	      24	  48566419 ns/op	     41181 tx/s	 9689906 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_4-8      	      28	  41983278 ns/op	     47638 tx/s	 9689929 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_4-8      	      28	  42122958 ns/op	     47480 tx/s	 9689909 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_4-8      	      30	  42236553 ns/op	     47352 tx/s	 9689938 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_4-8      	      28	  40814695 ns/op	     49002 tx/s	 9689921 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_4-8      	      28	  40398200 ns/op	     49507 tx/s	 9689897 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_8-8      	      28	  38700414 ns/op	     51679 tx/s	 9689973 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_8-8      	      30	  38846547 ns/op	     51485 tx/s	 9689997 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_8-8      	      30	  38075054 ns/op	     52528 tx/s	 9689912 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_8-8      	      30	  37643468 ns/op	     53130 tx/s	 9689941 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_8-8      	      31	  38891273 ns/op	     51425 tx/s	 9689911 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_10-8     	      32	  37264725 ns/op	     53670 tx/s	 9689918 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_10-8     	      31	  37489715 ns/op	     53348 tx/s	 9689925 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_10-8     	      32	  38510329 ns/op	     51934 tx/s	 9689918 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_10-8     	      27	  41686029 ns/op	     47978 tx/s	 9689942 B/op	   48046 allocs/op
+BenchmarkBlockSTMWorkers/workers_10-8     	      26	  39727021 ns/op	     50344 tx/s	 9689974 B/op	   48046 allocs/op
+PASS
+ok  	github.com/luxfi/evm/core/parallel	83.534s
+BLOCKSTM_DONE exit=0 2026-07-10T18:58:33Z

@@ -1,0 +1,5 @@
+[21:04:05] funder 0x9011E888251AB053B7bD1cdB598Db4f9DEd94714 | OPEN-LOOP pipeline 96 | chainId 96368
+[21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+[21:08:06] funding timeout
+[21:08:07] funded 0/60 in 241s
+[21:08:07] FATAL only 0 funded

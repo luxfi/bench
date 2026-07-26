@@ -1,0 +1,35 @@
+### Lux C-Chain live throughput (tp_loadgen_open.py) on lux-testnet (do-sfo3-lux-k8s) — 2026-07-10T21:03:50Z ###
+### image: ghcr.io/luxfi/node:v1.36.0 ###
+### tp-loadgen-probe deployed — waiting for MEASURE (fund + 45s window) ###
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:04:06] funding 60 keys x 5 LUX nonce=121 gp=200gwei
+  [21:08:07] FATAL only 0 funded
+FATAL in loadgen — aborting
+### NO MEASURE captured — see /Users/z/work/lux/bench/vs-ava/results/cchain_live_probe_pod.log ###
