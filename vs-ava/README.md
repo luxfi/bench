@@ -29,7 +29,7 @@ so we report it as headroom, tagged **P**-until-wired, never as a live win.
   installed toolchain (`GOTOOLCHAIN=local`) for a fair compiler.
 - **Cluster** (M): the live Lux **testnet**, 5 validators `luxd-0..4` on
   `ghcr.io/luxfi/node:v1.36.0` (`consensus v1.36.0`, `evm v1.104.8`), ns `lux-testnet` on
-  `do-sfo3-lux-k8s`, C-Chain id 96368, RPC `/v1/bc/C/rpc:9640`.
+  `do-sfo3-lux-k8s`, C-Chain id 96368, RPC `/v1/chain/C/rpc:9640`.
 - **Reference**: `~/work/ava` — read-only avalanchego clone. avalanchego `v1.14.2`
   (`+subnet-evm graft`), coreth `v0.15.4`. **Not modified, not pushed.**
 
