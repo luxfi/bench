@@ -21,7 +21,7 @@ _n    = int(os.environ.get("NNODES", "5"))
 _default = ",".join(f"luxd-{i}.luxd-headless.{_ns}.svc.cluster.local:{_port}" for i in range(_n))
 NODES = [hp.rsplit(":", 1) for hp in os.environ.get("NODES", _default).split(",")]
 HOST  = [h for h, _ in NODES]; PORT = [int(p) for _, p in NODES]; NN = len(NODES)
-RPC_PATH = "/v1/bc/C/rpc"
+RPC_PATH = "/v1/chain/C/rpc"
 CHAINID  = int(os.environ.get("CHAINID", "96368"))
 N_KEYS   = int(os.environ.get("N_KEYS", "60"))
 FUND_LUX = int(os.environ.get("FUND_LUX", "5"))
