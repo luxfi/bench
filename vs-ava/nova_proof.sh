@@ -34,13 +34,13 @@ RUNIMG=$(kubectl --context $CTX -n $NS get sts luxd -o jsonpath='{.spec.template
 say "### Nova proof on $NS — image $RUNIMG — $(date -u +%FT%TZ) ###"
 
 # eth_blockNumber of a live ordinal (novaHeight proxy) via kubectl exec (measurement needs no throughput)
-tip(){ kubectl --context $CTX -n $NS exec luxd-$1 -c luxd -- curl -s -m4 http://localhost:$RPC_PORT/v1/chain/C/rpc -X POST -H 'content-type: application/json' --data '{"jsonrpc":"2.0","id":1,"method":"eth_getBlockByNumber","params":["latest",false]}' 2>/dev/null | python3 -c 'import sys,json;b=json.load(sys.stdin)["result"];print(int(b["number"],16),b["hash"][:10])' 2>/dev/null; }
+tip(){ kubectl --context $CTX -n $NS exec luxd-$1 -c luxd -- curl -s -m4 http://localhost:$RPC_PORT/v1/bc/C/rpc -X POST -H 'content-type: application/json' --data '{"jsonrpc":"2.0","id":1,"method":"eth_getBlockByNumber","params":["latest",false]}' 2>/dev/null | python3 -c 'import sys,json;b=json.load(sys.stdin)["result"];print(int(b["number"],16),b["hash"][:10])' 2>/dev/null; }
 # finalized tag == the Quasar (⅔-stake export) tip after the v1.36 fix — STANDARD eth RPC, no custom method.
 # Returns the finalized block height, or 0 before the first export cert forms.
-qtip(){ kubectl --context $CTX -n $NS exec luxd-$1 -c luxd -- curl -s -m4 http://localhost:$RPC_PORT/v1/chain/C/rpc -X POST -H 'content-type: application/json' --data '{"jsonrpc":"2.0","id":1,"method":"eth_getBlockByNumber","params":["finalized",false]}' 2>/dev/null | python3 -c 'import sys,json;b=json.load(sys.stdin).get("result");print(int(b["number"],16) if b else 0)' 2>/dev/null; }
+qtip(){ kubectl --context $CTX -n $NS exec luxd-$1 -c luxd -- curl -s -m4 http://localhost:$RPC_PORT/v1/bc/C/rpc -X POST -H 'content-type: application/json' --data '{"jsonrpc":"2.0","id":1,"method":"eth_getBlockByNumber","params":["finalized",false]}' 2>/dev/null | python3 -c 'import sys,json;b=json.load(sys.stdin).get("result");print(int(b["number"],16) if b else 0)' 2>/dev/null; }
 
 # hash at a SPECIFIC height on node $1 — for common-height convergence (not latest-height skew).
-hashat(){ kubectl --context $CTX -n $NS exec luxd-$1 -c luxd -- curl -s -m4 http://localhost:$RPC_PORT/v1/chain/C/rpc -X POST -H 'content-type: application/json' --data '{"jsonrpc":"2.0","id":1,"method":"eth_getBlockByNumber","params":["'"$(printf '0x%x' "$2")"'",false]}' 2>/dev/null | python3 -c 'import sys,json;b=json.load(sys.stdin).get("result");print(b["hash"][:10] if b else "x")' 2>/dev/null; }
+hashat(){ kubectl --context $CTX -n $NS exec luxd-$1 -c luxd -- curl -s -m4 http://localhost:$RPC_PORT/v1/bc/C/rpc -X POST -H 'content-type: application/json' --data '{"jsonrpc":"2.0","id":1,"method":"eth_getBlockByNumber","params":["'"$(printf '0x%x' "$2")"'",false]}' 2>/dev/null | python3 -c 'import sys,json;b=json.load(sys.stdin).get("result");print(b["hash"][:10] if b else "x")' 2>/dev/null; }
 
 # measure a phase over `live` ordinals: nova(latest) advance + CONVERGENCE AT A COMMON CONFIRMED HEIGHT
 # (min-2: all live nodes must hold the SAME block there — height skew is NOT a fork) + finalized(quasar).

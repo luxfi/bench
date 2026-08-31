@@ -11,7 +11,7 @@ _port=os.environ.get('PORT','9640')  # testnet internal HTTP = 9640 (mainnet 963
 _default=",".join(f"luxd-{i}.luxd-headless.{os.environ.get('NS','lux-testnet')}.svc.cluster.local:{_port}" for i in range(5))
 NODES=[hp.rsplit(":",1) for hp in os.environ.get("NODES",_default).split(",")]
 HOST=[h for h,_ in NODES]; PORT=[int(p) for _,p in NODES]; NN=len(NODES)
-RPC_PATH="/v1/chain/C/rpc"
+RPC_PATH="/v1/bc/C/rpc"
 CHAINID=int(os.environ.get("CHAINID","96368"))   # testnet C-Chain
 N_KEYS=int(os.environ.get("N_KEYS","60"))
 FUND_LUX=int(os.environ.get("FUND_LUX","5"))

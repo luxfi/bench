@@ -23,7 +23,7 @@ say "### hammer5 on $NS ($CTX) image=$RUNIMG chainId=$CHAINID — $(date -u +%FT
 say "### baseline tips ###"
 for i in 0 1 2 3 4; do
   printf "luxd-%s " $i
-  kubectl --context $CTX -n $NS exec luxd-$i -c luxd -- curl -s -m5 http://localhost:$RPC_PORT/v1/chain/C/rpc -X POST -H 'content-type: application/json' \
+  kubectl --context $CTX -n $NS exec luxd-$i -c luxd -- curl -s -m5 http://localhost:$RPC_PORT/v1/bc/C/rpc -X POST -H 'content-type: application/json' \
     --data '{"jsonrpc":"2.0","id":1,"method":"eth_getBlockByNumber","params":["latest",false]}' 2>/dev/null \
     | python3 -c 'import sys,json;b=json.load(sys.stdin)["result"];print("h="+str(int(b["number"],16)),"hash="+b["hash"][:18])' 2>/dev/null || echo ERR
 done
