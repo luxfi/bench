@@ -14,7 +14,7 @@ Method (mirrors the block-walk in tp_loadgen_open.py's monitor, but cross-node):
     Height skew (a node simply not there yet) is NOT a fork — it's lag, tracked
     separately via all5_at_final_within2.
 Emits a per-poll log line + one final `VERDICT {json}` line. Same in-cluster
-node/RPC access as the loadgens (luxd-i.luxd-headless...:PORT /v1/bc/C/rpc)."""
+node/RPC access as the loadgens (luxd-i.luxd-headless...:PORT /v1/chain/C/rpc)."""
 import os, json, time, http.client
 
 _port = os.environ.get("PORT", "9640")
@@ -23,7 +23,7 @@ _n    = int(os.environ.get("NNODES", "5"))
 _default = ",".join(f"luxd-{i}.luxd-headless.{_ns}.svc.cluster.local:{_port}" for i in range(_n))
 NODES = [hp.rsplit(":", 1) for hp in os.environ.get("NODES", _default).split(",")]
 HOST  = [h for h, _ in NODES]; PORT = [int(p) for _, p in NODES]; NN = len(NODES)
-RPC_PATH = "/v1/bc/C/rpc"
+RPC_PATH = "/v1/chain/C/rpc"
 DURATION = int(os.environ.get("DURATION", "260"))
 SAMPLE   = float(os.environ.get("SAMPLE", "2.0"))
 CONFIRM  = int(os.environ.get("CONFIRM_DEPTH", "2"))   # verify at tip-CONFIRM
