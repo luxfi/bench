@@ -23,8 +23,8 @@ import (
 // cache coherency at extreme cores (>64 hw threads).
 
 const (
-	parallelBufCount  = 1000
-	parallelTestSecs  = 1
+	parallelBufCount = 1000
+	parallelTestSecs = 1
 )
 
 func benchmarkParallelVerify(b *testing.B, n int, verify func([]byte)) int64 {
@@ -45,7 +45,7 @@ func runParallelVerify(n int, bufs [][]byte, verify func([]byte) error, window t
 	)
 	start := make(chan struct{})
 	wg.Add(n)
-	for g := 0; g < n; g++ {
+	for g := range n {
 		go func(gid int) {
 			defer wg.Done()
 			<-start
@@ -53,7 +53,7 @@ func runParallelVerify(n int, bufs [][]byte, verify func([]byte) error, window t
 			var local int64
 			idx := gid // start at goroutine id, walk forward; deterministic
 			for time.Now().Before(deadline) {
-				for i := 0; i < 256; i++ {
+				for range 256 {
 					if err := verify(bufs[idx%parallelBufCount]); err != nil {
 						return
 					}

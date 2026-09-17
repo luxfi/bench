@@ -37,14 +37,14 @@ func quicMultiplexBench(b *testing.B, makeBuf func() []byte, op func([]byte) err
 	var wg sync.WaitGroup
 	start := make(chan struct{})
 	wg.Add(quicStreamCount)
-	for s := 0; s < quicStreamCount; s++ {
+	for range quicStreamCount {
 		go func() {
 			defer wg.Done()
 			<-start
 			deadline := time.Now().Add(quicTestWindow)
 			var local int64
 			for time.Now().Before(deadline) {
-				for i := 0; i < 256; i++ {
+				for range 256 {
 					if err := op(buf); err != nil {
 						return
 					}

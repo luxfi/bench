@@ -10,6 +10,7 @@ import (
 	"fmt"
 	"os"
 	"runtime"
+	"slices"
 	"sort"
 	"time"
 )
@@ -58,7 +59,7 @@ type ResultRecord struct {
 	//   multi_validator: "blocks_per_sec", "cert_tier_final"
 	//   parity:       "scheme_a", "scheme_b", "diff_count"
 	// Keep keys snake_case for downstream JQ.
-	Extra map[string]interface{} `json:"extra,omitempty"`
+	Extra map[string]any `json:"extra,omitempty"`
 }
 
 // NewRecord stamps the mandatory fields. Mode is the only required value;
@@ -71,7 +72,7 @@ func NewRecord(mode, subtest string) ResultRecord {
 		Architecture: DetectArchitecture(),
 		Timestamp:    time.Now().UTC(),
 		GoVersion:    runtime.Version(),
-		Extra:        map[string]interface{}{},
+		Extra:        map[string]any{},
 	}
 }
 
@@ -147,7 +148,7 @@ func Quantile(vals []time.Duration, q float64) time.Duration {
 func SortDurations(vals []time.Duration) []time.Duration {
 	out := make([]time.Duration, len(vals))
 	copy(out, vals)
-	sort.Slice(out, func(i, j int) bool { return out[i] < out[j] })
+	slices.Sort(out)
 	return out
 }
 

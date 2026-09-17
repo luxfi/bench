@@ -63,7 +63,7 @@ func makeChunkedBlockZAP() ([]chunk, []byte) {
 	buf[14] = byte((chunkBlockBytes >> 16) & 0xFF)
 	buf[15] = byte((chunkBlockBytes >> 24) & 0xFF)
 	chunks := make([]chunk, chunkCount)
-	for i := 0; i < chunkCount; i++ {
+	for i := range chunkCount {
 		c := chunk{
 			idx:  i,
 			data: buf[i*chunkSize : (i+1)*chunkSize],
@@ -85,7 +85,7 @@ func makeChunkedBlockCodec() ([]chunk, []byte) {
 		buf[i] = byte(i & 0xFF)
 	}
 	chunks := make([]chunk, chunkCount)
-	for i := 0; i < chunkCount; i++ {
+	for i := range chunkCount {
 		c := chunk{
 			idx:  i,
 			data: buf[i*chunkSize : (i+1)*chunkSize],
@@ -205,7 +205,7 @@ func BenchmarkChunkTTFV_Codec_BlockingLatency(b *testing.B) {
 			chunksToFirstValidate++
 			// Codec validation requires ALL chunks present
 			allReceived := true
-			for j := 0; j < chunkCount; j++ {
+			for j := range chunkCount {
 				if !received[j] {
 					allReceived = false
 					break

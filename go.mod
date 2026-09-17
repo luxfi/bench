@@ -1,6 +1,6 @@
 module github.com/luxfi/bench
 
-go 1.26.4
+go 1.27.1
 
 // Local replace directives so the bench harness builds against the
 // in-tree luxfi modules. Drop these once we tag and pin a release.

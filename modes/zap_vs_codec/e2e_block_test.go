@@ -2,7 +2,7 @@ package zapvscodec
 
 import (
 	"crypto/sha256"
-	"sort"
+	"slices"
 	"testing"
 	"time"
 )
@@ -101,7 +101,7 @@ func BenchmarkE2EBlock_Codec(b *testing.B) {
 		allLat = append(allLat, lats...)
 	}
 	b.StopTimer()
-	sort.Slice(allLat, func(i, j int) bool { return allLat[i] < allLat[j] })
+	slices.Sort(allLat)
 	b.ReportMetric(float64(totalBlockNs)/float64(b.N), "ns/block")
 	b.ReportMetric(float64(percentile(allLat, 50)), "p50-ns/tx")
 	b.ReportMetric(float64(percentile(allLat, 95)), "p95-ns/tx")
@@ -127,7 +127,7 @@ func BenchmarkE2EBlock_ZAP(b *testing.B) {
 		allLat = append(allLat, lats...)
 	}
 	b.StopTimer()
-	sort.Slice(allLat, func(i, j int) bool { return allLat[i] < allLat[j] })
+	slices.Sort(allLat)
 	b.ReportMetric(float64(totalBlockNs)/float64(b.N), "ns/block")
 	b.ReportMetric(float64(percentile(allLat, 50)), "p50-ns/tx")
 	b.ReportMetric(float64(percentile(allLat, 95)), "p95-ns/tx")

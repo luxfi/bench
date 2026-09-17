@@ -66,10 +66,7 @@ func BenchmarkStreamingVerify_ZAP_BUFV(b *testing.B) {
 func BenchmarkStreamingVerify_Codec_HeaderCost(b *testing.B) {
 	// Pad a real tx out to 64 KiB by appending memo-style bytes.
 	base := MakeCodecValidatorBytes()
-	pad := streamingBufSize - len(base)
-	if pad <= 0 {
-		pad = 0
-	}
+	pad := max(streamingBufSize-len(base), 0)
 	// We cannot just blindly extend codec bytes — the unmarshal will fail
 	// on trailing data. The "validate header" step in codec is the version
 	// prefix unpack (2 bytes). That's it. So we measure that explicitly.

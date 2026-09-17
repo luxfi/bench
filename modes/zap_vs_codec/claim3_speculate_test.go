@@ -32,7 +32,7 @@ func benchmarkSpeculate_Codec(b *testing.B, depth int) {
 		// Per speculation: unmarshal, optionally remarshal for gossip.
 		// Final accepted speculation is index depth-1; the others are
 		// discarded — their remarshal work is wasted.
-		for d := 0; d < depth; d++ {
+		for range depth {
 			tx, err := UnmarshalCodec(buf)
 			if err != nil {
 				b.Fatal(err)
@@ -57,7 +57,7 @@ func benchmarkSpeculate_ZAP(b *testing.B, depth int) {
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		// Per speculation: wrap, optionally pointer-share for gossip.
-		for d := 0; d < depth; d++ {
+		for range depth {
 			tx, err := WrapZAPValidator(buf)
 			if err != nil {
 				b.Fatal(err)
@@ -70,12 +70,12 @@ func benchmarkSpeculate_ZAP(b *testing.B, depth int) {
 	}
 }
 
-func BenchmarkSpeculate_Codec_D2(b *testing.B)  { benchmarkSpeculate_Codec(b, 2) }
-func BenchmarkSpeculate_Codec_D4(b *testing.B)  { benchmarkSpeculate_Codec(b, 4) }
-func BenchmarkSpeculate_Codec_D8(b *testing.B)  { benchmarkSpeculate_Codec(b, 8) }
-func BenchmarkSpeculate_ZAP_D2(b *testing.B)    { benchmarkSpeculate_ZAP(b, 2) }
-func BenchmarkSpeculate_ZAP_D4(b *testing.B)    { benchmarkSpeculate_ZAP(b, 4) }
-func BenchmarkSpeculate_ZAP_D8(b *testing.B)    { benchmarkSpeculate_ZAP(b, 8) }
+func BenchmarkSpeculate_Codec_D2(b *testing.B) { benchmarkSpeculate_Codec(b, 2) }
+func BenchmarkSpeculate_Codec_D4(b *testing.B) { benchmarkSpeculate_Codec(b, 4) }
+func BenchmarkSpeculate_Codec_D8(b *testing.B) { benchmarkSpeculate_Codec(b, 8) }
+func BenchmarkSpeculate_ZAP_D2(b *testing.B)   { benchmarkSpeculate_ZAP(b, 2) }
+func BenchmarkSpeculate_ZAP_D4(b *testing.B)   { benchmarkSpeculate_ZAP(b, 4) }
+func BenchmarkSpeculate_ZAP_D8(b *testing.B)   { benchmarkSpeculate_ZAP(b, 8) }
 
 // BenchmarkSpeculate_DiscardCost_Codec measures the wasted-work cost when
 // only the FINAL speculation is accepted. We bench the marshal+unmarshal pair

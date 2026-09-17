@@ -63,7 +63,7 @@ func BenchmarkBlockStream_Codec(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		// 5 hops: each hop re-marshals every tx.
 		current := block
-		for hop := 0; hop < streamHopCount; hop++ {
+		for range streamHopCount {
 			next := make([][]byte, len(current))
 			for i, buf := range current {
 				out, err := hopCodec(buf)
@@ -93,7 +93,7 @@ func BenchmarkBlockStream_ZAP(b *testing.B) {
 	for n := 0; n < b.N; n++ {
 		// 5 hops: each hop forwards bytes byte-for-byte (no marshal).
 		current := block
-		for hop := 0; hop < streamHopCount; hop++ {
+		for range streamHopCount {
 			next := make([][]byte, len(current))
 			for i, buf := range current {
 				out, err := hopZAP(buf)
